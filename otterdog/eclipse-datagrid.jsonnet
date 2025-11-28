@@ -30,6 +30,13 @@ orgs.newOrg('technology.datagrid', 'eclipse-datagrid') {
       description: "",
       has_discussions: true,
       homepage: "https://eclipsestore.io/",
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          requires_pull_request: true,
+          requires_commit_signatures: true,
+          required_approving_review_count: 1
+        },
+      ],
       topics+: [
         "in-memory-database",
         "in-memory-storage",
