@@ -27,7 +27,7 @@ orgs.newOrg('technology.datagrid', 'eclipse-datagrid') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      description = "Docs: https://docs.microstream.one/enterprise/",
+      description: "Docs: https://docs.microstream.one/enterprise/",
       has_discussions: true,
       homepage: "https://eclipsestore.io/",
       branch_protection_rules: [
