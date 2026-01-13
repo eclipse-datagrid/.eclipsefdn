@@ -49,5 +49,19 @@ orgs.newOrg('technology.datagrid', 'eclipse-datagrid') {
       ],
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('demos') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      has_discussions: true,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          requires_pull_request: true,
+          requires_commit_signatures: true,
+          required_approving_review_count: 1
+        },
+      ],
+      web_commit_signoff_required: false,
+    },
   ],
 }
